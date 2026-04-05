@@ -1,0 +1,10 @@
+Options -Indexes
+
+# Deny direct access to internal PHP includes and the SQLite database
+<FilesMatch "^(includes|data)/">
+    Require all denied
+</FilesMatch>
+
+# PHP error display (disable in production)
+php_flag display_errors Off
+php_flag log_errors On

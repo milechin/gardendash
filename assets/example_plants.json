@@ -1,0 +1,55 @@
+{
+  "plants": [
+    {
+      "name": "Tomato - Roma",
+      "variety": "Roma VF",
+      "sow_date": "2026-03-15",
+      "transplant_date": "2026-05-15",
+      "harvest_date": "2026-08-20",
+      "frost_temp_f": 36,
+      "max_heat_temp_f": 95,
+      "min_weekly_rain_in": 0.75,
+      "notes": "Start indoors 6-8 weeks before last frost. Transplant after danger of frost passes."
+    },
+    {
+      "name": "Cucumber",
+      "variety": "Straight Eight",
+      "sow_date": "2026-05-20",
+      "harvest_date": "2026-08-15",
+      "frost_temp_f": 40,
+      "max_heat_temp_f": 90,
+      "min_weekly_rain_in": 1.0,
+      "notes": "Direct sow after last frost. Needs consistent moisture."
+    },
+    {
+      "name": "Basil",
+      "variety": "Sweet Basil",
+      "sow_date": "2026-04-01",
+      "transplant_date": "2026-05-20",
+      "harvest_date": "2026-09-30",
+      "frost_temp_f": 40,
+      "max_heat_temp_f": 95,
+      "min_weekly_rain_in": 0.5,
+      "notes": "Very frost sensitive. Start indoors, transplant when nights stay above 50F."
+    },
+    {
+      "name": "Zucchini",
+      "variety": "Black Beauty",
+      "sow_date": "2026-05-25",
+      "harvest_date": "2026-09-01",
+      "frost_temp_f": 38,
+      "max_heat_temp_f": 90,
+      "min_weekly_rain_in": 0.75
+    },
+    {
+      "name": "Kale",
+      "variety": "Lacinato",
+      "sow_date": "2026-08-01",
+      "harvest_date": "2026-11-15",
+      "frost_temp_f": 20,
+      "max_heat_temp_f": 85,
+      "min_weekly_rain_in": 0.5,
+      "notes": "Fall crop. Frost actually improves flavor."
+    }
+  ]
+}

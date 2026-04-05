@@ -1,0 +1,15 @@
+# SQLite database files
+data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# Uploaded plant photos
+uploads/*
+!uploads/.gitkeep
+
+# macOS / editor artifacts
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/settings.json

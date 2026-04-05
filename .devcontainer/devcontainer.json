@@ -1,0 +1,29 @@
+{
+  "name": "Garden Dashboard",
+  "build": {
+    "dockerfile": "../Dockerfile"
+  },
+  "forwardPorts": [80],
+  "portsAttributes": {
+    "80": {
+      "label": "Garden Dashboard",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postCreateCommand": "mkdir -p /var/www/html/data /var/www/html/uploads && chown -R www-data:www-data /var/www/html/data /var/www/html/uploads && service apache2 start || true",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "xdebug.php-debug",
+        "formulahendry.auto-rename-tag",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "php.validate.executablePath": "/usr/local/bin/php",
+        "editor.formatOnSave": false
+      }
+    }
+  },
+  "remoteUser": "root"
+}
