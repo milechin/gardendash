@@ -3,11 +3,12 @@ FROM php:8.4-apache
 # Enable mod_rewrite
 RUN a2enmod rewrite
 
-# Install PDO SQLite extension
-RUN docker-php-ext-install pdo pdo_sqlite
-
-# Enable file info extension (used for MIME type validation of uploads)
-RUN docker-php-ext-enable fileinfo || true
+# Install system deps, then compile PHP extensions
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        libsqlite3-dev \
+    && rm -rf /var/lib/apt/lists/* \
+    && docker-php-ext-install pdo pdo_sqlite \
+    && docker-php-ext-enable fileinfo
 
 # Allow .htaccess overrides
 RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
