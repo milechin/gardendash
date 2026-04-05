@@ -7,8 +7,7 @@ RUN a2enmod rewrite
 RUN apt-get update && apt-get install -y --no-install-recommends \
         libsqlite3-dev \
     && rm -rf /var/lib/apt/lists/* \
-    && docker-php-ext-install pdo pdo_sqlite \
-    && docker-php-ext-enable fileinfo
+    && docker-php-ext-install pdo pdo_sqlite
 
 # Allow .htaccess overrides
 RUN sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf
